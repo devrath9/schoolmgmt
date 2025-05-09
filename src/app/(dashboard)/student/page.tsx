@@ -4,14 +4,20 @@ import EventCalendar from "@/components/EventCalendar"
 
 const Studentpage = () => {
   return (
-    <div className="flex flex-col gap-4 xl:flex-row p-4">
+    <div className="flex flex-col gap-4 xl:flex-row  p-4">
 
       {/*---------LEFT SIDE----------- */}
       <div className="w-full xl:w-2/3 ">
 
-         <div className=" h-full rounded-md white p-4 bg-white">
+         <div className=" h-full rounded-md white p-4 bg-white ">
             <h1 className="text-xl font-semibold max-sm:mb-5">Schedule 4A</h1>
-            <BigCalendar/>
+
+             {/* Responsive scroll wrapper */}
+              <div className=" overflow-x-auto">
+                <div className="min-w-[700px] h-[600px]"> {/* You can adjust min-width based on how much space calendar needs */}
+                <BigCalendar />
+                </div>
+              </div>
           </div>
 
       </div>
