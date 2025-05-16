@@ -11,7 +11,7 @@ export default function DashboardLayout({
     return (
       <div className="h-screen overflow-hidden flex">
         {/**--------LEFT------------- */}
-        <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%]  h-[100%] overflow-y-auto sidebar p-4">
+        <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%]  h-[100%] overflow-y-auto sidebar p-4 border-r border-gray-200 shadow-lg rounded-lg">
           <Link href="/" className="flex items-center justify-center gap-2 lg:justify-start">
               <Image src='/logo.png' width={32} height={32} alt=''/>
               <span className="hidden lg:block font-bold">SchoolName</span>

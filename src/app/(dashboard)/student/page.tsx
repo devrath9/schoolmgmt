@@ -4,31 +4,27 @@ import EventCalendar from "@/components/EventCalendar"
 
 const Studentpage = () => {
   return (
-    <div className="flex flex-col gap-4 xl:flex-row  p-4">
+    <div className="flex flex-col gap-4 xl:flex-row p-4 ">
+  {/* LEFT SIDE */}
+  <div className="w-full xl:w-2/3 flex flex-col">
+    <div className="flex flex-col flex-1 bg-white rounded-md p-4">
+      <h1 className="text-xl font-semibold max-sm:mb-5">Schedule 4A</h1>
 
-      {/*---------LEFT SIDE----------- */}
-      <div className="w-full xl:w-2/3 ">
-
-         <div className=" h-full rounded-md white p-4 bg-white ">
-            <h1 className="text-xl font-semibold max-sm:mb-5">Schedule 4A</h1>
-
-             {/* Responsive scroll wrapper */}
-              <div className=" overflow-x-auto">
-                <div className="min-w-[700px] h-[600px]"> {/* You can adjust min-width based on how much space calendar needs */}
-                <BigCalendar />
-                </div>
-              </div>
-          </div>
-
+      {/* Responsive wrapper */}
+      <div className="mt-4 flex-1 overflow-auto">
+        <div className="min-w-[700px] h-[600px] xl:h-full">
+          <BigCalendar />
+        </div>
       </div>
-
-      {/*---------RIGHT SIDE----------- */}
-       <div className="w-full xl:w-1/3 flex flex-col gap-8  ">
-         <EventCalendar/>
-         <Announcements/>
-      </div>
-      
     </div>
+  </div>
+
+  {/* RIGHT SIDE */}
+  <div className="w-full xl:w-1/3 flex flex-col gap-8">
+    <EventCalendar />
+    <Announcements />
+  </div>
+</div>
   )
 }
 
